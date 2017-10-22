@@ -15,6 +15,7 @@ WORKDIR /workspace
 RUN npm install
 
 # WebUI
+EXPOSE 3131
 EXPOSE 80
 # Debug Port
 EXPOSE 15454

@@ -1,0 +1,17 @@
+version: '2'
+services:
+  cloud9:
+    build: .
+    restart: always
+    ports:
+      - 8080:80
+      - 15454:15454
+      - 3000:3000
+      - 3131:3131
+      - 4000:4000
+    volumes:
+      - ./workspace:/workspace
+      - ~/.gitconfig:/root/.gitconfig:ro
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro
+      - /etc/localtime:/etc/localtime:ro
+    command: node /cloud9/server.js --port 80 -w /workspace -l 0.0.0.0
