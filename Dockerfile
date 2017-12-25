@@ -1,5 +1,5 @@
 # Dockerfile
-FROM hephaex/ubuntu:16.04
+FROM hephaex/ubuntu
 MAINTAINER Mario Cho <hephaex@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
